@@ -84,6 +84,14 @@ export async function getMovieImages(id) {
   return tmdbFetch(`/movie/${id}/images`, { include_image_language: 'en,null' })
 }
 
+export async function getWatchProviders(id) {
+  return tmdbFetch(`/movie/${id}/watch/providers`)
+}
+
+export async function getTvWatchProviders(id) {
+  return tmdbFetch(`/tv/${id}/watch/providers`)
+}
+
 export async function getMovieVideos(id) {
   const data = await tmdbFetch(`/movie/${id}/videos`)
   if (data.results?.length) return data

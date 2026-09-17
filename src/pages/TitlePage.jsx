@@ -57,7 +57,7 @@ function TitlePage({ movieSlug, onBack, onOpenTitle, onOpenWatch, onOpenMovies, 
       <Reveal><PhotosGallery movie={movie} onOpenPhoto={onOpenPhoto} /></Reveal>
       <Reveal><CastList movie={movie} /></Reveal>
       <Reveal><UserReviews movie={movie} onSeeAll={onSeeAllReviews} /></Reveal>
-      <Reveal><WhereToWatch /></Reveal>
+      <Reveal><WhereToWatch movie={movie} /></Reveal>
       <Reveal><TitleNews movie={movie} /></Reveal>
       <Reveal><Storyline movie={movie} /></Reveal>
       <Reveal><DidYouKnow movie={movie} /></Reveal>

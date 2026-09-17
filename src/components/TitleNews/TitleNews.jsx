@@ -1,4 +1,3 @@
-import iconArrow from '../CastList/assets/icon-arrow.svg'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import './TitleNews.css'
 
@@ -12,10 +11,6 @@ function TitleNews({ movie }) {
     <section className="title-news">
       <div className="title-news__header">
         <h2>{t('title_news_heading')}</h2>
-        <button type="button" className="title-news__see-all">
-          <span>{t('see_all')}</span>
-          <img src={iconArrow} alt="" />
-        </button>
       </div>
 
       <div className="title-news__grid">
