@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+.title-news {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 40px calc((100vw - 1219px) / 2);
+  background: var(--site-bg);
+  font-family: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.title-news__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-news__header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--site-text);
+}
+
+.title-news__see-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 42px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--site-text);
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.title-news__see-all img {
+  width: 24px;
+  height: 24px;
+}
+
+.title-news__grid {
+  display: flex;
+  gap: 19px;
+}
+
+.title-news__card {
+  display: flex;
+  gap: 20px;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.title-news__photo {
+  width: 180px;
+  height: 266px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.title-news__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.title-news__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.17;
+  color: var(--site-text);
+}
+
+.title-news__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--site-text-secondary);
+}
+
+.title-news__source {
+  color: #d8c882;
+}
+
+.title-news__meta-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--site-text-secondary);
+  display: block;
+}
+
+.title-news__body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--site-text);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 1279px) {
+  .title-news__grid {
+    flex-direction: column;
+  }
+
+  .title-news__card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.is-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.is-scene__ship {
+  position: absolute;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px rgba(219, 228, 240, 0.4));
+}
+
+.is-scene__ship--a {
+  top: 12%;
+  animation: is-drift-a 26s linear infinite;
+}
+
+.is-scene__ship--b {
+  top: 40%;
+  transform: scale(0.55);
+  animation: is-drift-b 34s linear infinite;
+  animation-delay: -10s;
+}
+
+@keyframes is-drift-a {
+  0% { transform: translateX(-15vw) scale(0.9); opacity: 0; }
+  8% { opacity: 0.9; }
+  92% { opacity: 0.9; }
+  100% { transform: translateX(115vw) scale(0.9); opacity: 0; }
+}
+
+@keyframes is-drift-b {
+  0% { transform: translateX(-15vw) scale(0.55); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateX(115vw) scale(0.55); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-scene__ship {
+    animation: none !important;
+  }
+}

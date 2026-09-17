@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.photos-gallery {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 40px calc((100vw - 1219px) / 2);
+  background: var(--site-bg);
+  font-family: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.photos-gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photos-gallery__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.photos-gallery__title-dot {
+  display: block;
+  width: 4px;
+  height: 5px;
+}
+
+.photos-gallery__title h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--site-text);
+  white-space: nowrap;
+}
+
+.photos-gallery__see-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 42px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(163, 163, 163, 0.15);
+  box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 0.08);
+  color: var(--site-text);
+  font-size: 16px;
+  line-height: 1.75;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.photos-gallery__see-all img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.photos-gallery__nav {
+  display: flex;
+  align-items: center;
+}
+
+.photos-gallery__arrow {
+  width: 42.341px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.photos-gallery__arrow img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.photos-gallery__arrow--prev img {
+  transform: rotate(180deg);
+}
+
+.photos-gallery__arrow:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--movie-accent, #f5c518) 45%, transparent);
+}
+
+.photos-gallery__list {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+}
+
+.photos-gallery__tile {
+  width: 264px;
+  height: 264px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.photos-gallery__tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photos-gallery__tile:hover img {
+  transform: scale(1.06);
+}

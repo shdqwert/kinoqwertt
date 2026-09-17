@@ -1,4 +1,10 @@
 :root {
+  /* Site-wide day/night tokens used by the IMDb-clone components */
+  --site-bg: #080808;
+  --site-text: #c3c3c3;
+  --site-text-secondary: #797979;
+  --site-surface-solid: #151515;
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -50,8 +56,17 @@
   }
 }
 
+:root[data-theme='light'] {
+  --site-bg: #f7f7f5;
+  --site-text: #1c1c1c;
+  --site-text-secondary: #5a5a5a;
+  --site-surface-solid: #ffffff;
+}
+
 body {
   margin: 0;
+  background: var(--site-bg);
+  transition: background 0.3s ease;
 }
 
 #root {
@@ -108,4 +123,30 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/*
+ * Site-wide affordance for the many small icon-only nav/carousel buttons
+ * (prev/next arrows, info buttons, etc.): dim and de-hover them the moment
+ * they're genuinely disabled (no more content in that direction), and give
+ * every enabled button in this family a light hover/press animation so
+ * clicks feel responsive.
+ */
+button:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.35;
+}
+
+[class*='__arrow']:not(:disabled),
+[class*='__info']:not(:disabled),
+[class*='__bookmark']:not(:disabled) {
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+[class*='__arrow']:not(:disabled):hover {
+  transform: scale(1.08);
+}
+
+[class*='__arrow']:not(:disabled):active {
+  transform: scale(0.94);
 }

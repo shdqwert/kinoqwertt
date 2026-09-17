@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.simple-grid-page__back-bar {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 20px calc((100vw - 1444px) / 2) 0;
+  background: var(--site-bg);
+}
+
+.simple-grid-page__back {
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: var(--site-text-secondary);
+  cursor: pointer;
+}
+
+.simple-grid-page__back:hover {
+  color: var(--site-text);
+}
+
+.simple-grid-page {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 30px calc((100vw - 1444px) / 2) 60px;
+  background: var(--site-bg);
+  font-family: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.simple-grid-page__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.simple-grid-page__eyebrow {
+  margin: 0;
+  font-size: 16px;
+  color: var(--site-text-secondary);
+}
+
+.simple-grid-page__heading h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--site-text);
+}
+
+.simple-grid-page__subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: var(--site-text-secondary);
+}
+
+.simple-grid-page__status {
+  margin: 0;
+  color: var(--site-text-secondary);
+  font-size: 16px;
+}
+
+.simple-grid-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.simple-grid-page__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.simple-grid-page__card--clickable {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.simple-grid-page__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(163, 163, 163, 0.1);
+}
+
+.simple-grid-page__poster--round {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.simple-grid-page__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.simple-grid-page__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--site-text);
+  line-height: 1.3;
+}
+
+.simple-grid-page__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--site-text-secondary);
+}
+
+.simple-grid-page__meta img {
+  width: 16px;
+  height: 16px;
+}
+
+.simple-grid-page__year {
+  margin-left: auto;
+}
+
+.simple-grid-page__subtext {
+  margin: 0;
+  font-size: 14px;
+  color: var(--site-text-secondary);
+  line-height: 1.4;
+}

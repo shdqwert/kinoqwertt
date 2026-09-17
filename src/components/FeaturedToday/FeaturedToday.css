@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.featured-today {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: 40px calc((100vw - 1444px) / 2);
+  background: var(--site-bg);
+  font-family: 'Roboto', system-ui, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.featured-today__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-today__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured-today__title-dot {
+  display: block;
+  width: 4px;
+  height: 5px;
+}
+
+.featured-today__title h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--site-text);
+  white-space: nowrap;
+}
+
+.featured-today__nav {
+  display: flex;
+  align-items: center;
+}
+
+.featured-today__arrow {
+  width: 42.341px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+}
+
+.featured-today__arrow img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.featured-today__arrow--prev img {
+  transform: rotate(180deg);
+}
+
+.featured-today__list {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+
+.featured-today__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 342px;
+  height: 262px;
+  flex-shrink: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.featured-today__card-image {
+  position: relative;
+  flex: 1 0 0;
+  min-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featured-today__card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-today__badge {
+  position: absolute;
+  left: 14px;
+  bottom: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 42px;
+  padding: 8px 18px;
+  border-radius: 45px;
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--site-text);
+  font-size: 16px;
+  line-height: 1.75;
+  white-space: nowrap;
+}
+
+.featured-today__badge img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.featured-today__caption {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.75;
+  white-space: nowrap;
+}
+
+.featured-today__caption-title {
+  margin: 0;
+  color: var(--site-text);
+}
+
+.featured-today__caption-cta {
+  margin: 0;
+  color: #f5c518;
+}
