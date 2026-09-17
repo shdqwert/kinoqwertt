@@ -19,6 +19,17 @@
 .title-header__media,
 .title-header__bottom {
   position: relative;
+}
+
+.title-header__top {
+  /* Above .title-header__media so the rate popover it hosts isn't hidden
+     behind the backdrop image sitting right below it (same z-index +
+     later DOM order would otherwise let that image win). */
+  z-index: 2;
+}
+
+.title-header__media,
+.title-header__bottom {
   z-index: 1;
 }
 
